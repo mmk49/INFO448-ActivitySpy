@@ -11,7 +11,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         Log.i("lifeCycle", "onCreate event fired")
         super.onCreate(savedInstanceState)
-        Log.i("lifeCycle", "savedInstanceState parameter passed")
+        Log.i("lifeCycle", "savedInstanceState parameter passed: " + savedInstanceState)
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
@@ -44,6 +44,6 @@ class MainActivity : AppCompatActivity() {
     override fun onDestroy() {
         super.onDestroy()
         Log.i("lifeCycle", "onDestroy event fired")
-        Log.i("lifeCycle", "We're going down, Captain!")
+        Log.e("lifeCycle", "Get to the chopper")
     }
 }
